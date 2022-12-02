@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221202 17:21:29.101" rpa="false" schemaversion="3">
+<suite id="s1" name="Exigence02" source="c:\Users\Inna_D\Desktop\Projet_Final\Scripts\Exigence02.robot">
+<test id="s1-t1" name="Test s'inscrire a l'applic avec Newsletter" line="18">
+<kw name="connecter au site" library="Keywords">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221202 17:21:29.218" level="INFO">Opening browser 'gc' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20221202 17:21:29.217" endtime="20221202 17:21:32.488"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221202 17:21:32.488" endtime="20221202 17:21:32.600"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221202 17:21:34.613" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221202 17:21:32.601" endtime="20221202 17:21:34.613"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:29.217" endtime="20221202 17:21:34.613"/>
+</kw>
+<kw name="clikMyAccount" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_MyAccount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:34.614" level="INFO">Clicking element 'xpath://span[@class='hidden-xs hidden-sm hidden-md'and text()='My Account']'.</msg>
+<status status="PASS" starttime="20221202 17:21:34.614" endtime="20221202 17:21:34.636"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:34.613" endtime="20221202 17:21:34.637"/>
+</kw>
+<kw name="clickRegistre" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_Register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:34.637" level="INFO">Clicking element '//a[@href='http://tutorialsninja.com/demo/index.php?route=account/register']'.</msg>
+<status status="PASS" starttime="20221202 17:21:34.637" endtime="20221202 17:21:35.617"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:34.637" endtime="20221202 17:21:35.617"/>
+</kw>
+<kw name="remplirFormulaire" library="Keywords">
+<arg>${firstN}</arg>
+<arg>${lastN}</arg>
+<arg>${vemail}</arg>
+<arg>${vtelephone}</arg>
+<arg>${vpassword}</arg>
+<arg>${vconfirm}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221202 17:21:35.618" endtime="20221202 17:21:35.633"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${firstName}</arg>
+<arg>${firstN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.633" level="INFO">Typing text 'Inna' into text field 'input-firstname'.</msg>
+<status status="PASS" starttime="20221202 17:21:35.633" endtime="20221202 17:21:35.668"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${lastName}</arg>
+<arg>${lastN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.669" level="INFO">Typing text 'Diachenko' into text field 'input-lastname'.</msg>
+<status status="PASS" starttime="20221202 17:21:35.668" endtime="20221202 17:21:35.707"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email}</arg>
+<arg>${vemail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.707" level="INFO">Typing text 'longine111@gmail.com' into text field '//input[@id='input-email']'.</msg>
+<status status="PASS" starttime="20221202 17:21:35.707" endtime="20221202 17:21:35.745"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${telephone}</arg>
+<arg>${vtelephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.746" level="INFO">Typing text '999-999-9999' into text field '//input[@id='input-telephone']'.</msg>
+<status status="PASS" starttime="20221202 17:21:35.745" endtime="20221202 17:21:35.782"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>${vpassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.783" level="INFO">Typing password into text field '//input[@id='input-password']'.</msg>
+<msg timestamp="20221202 17:21:35.801" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221202 17:21:35.818" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221202 17:21:35.783" endtime="20221202 17:21:35.819"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${confirm}</arg>
+<arg>${vconfirm}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.819" level="INFO">Typing password into text field '//input[@id='input-confirm']'.</msg>
+<msg timestamp="20221202 17:21:35.837" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221202 17:21:35.854" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221202 17:21:35.819" endtime="20221202 17:21:35.854"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:35.617" endtime="20221202 17:21:35.855"/>
+</kw>
+<kw name="choisir Newsletter" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_radio_Newsletter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.855" level="INFO">Clicking element 'name=newsletter'.</msg>
+<status status="PASS" starttime="20221202 17:21:35.855" endtime="20221202 17:21:35.878"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:35.855" endtime="20221202 17:21:35.878"/>
+</kw>
+<kw name="choisir Privacy Policy" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_radio_PrivacyPolicy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.879" level="INFO">Clicking element 'name=agree'.</msg>
+<status status="PASS" starttime="20221202 17:21:35.878" endtime="20221202 17:21:35.901"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:35.878" endtime="20221202 17:21:35.901"/>
+</kw>
+<kw name="continuer l'inscription" library="Keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_continue}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:35.902" level="INFO">Clicking button '//input[@value='Continue']'.</msg>
+<status status="PASS" starttime="20221202 17:21:35.902" endtime="20221202 17:21:36.505"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221202 17:21:38.519" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221202 17:21:36.505" endtime="20221202 17:21:38.519"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:35.901" endtime="20221202 17:21:38.519"/>
+</kw>
+<kw name="validation de creation" library="Keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>./ScreenShot/pic.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221202 17:21:38.654" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ScreenShot/pic.png"&gt;&lt;img src="ScreenShot/pic.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221202 17:21:38.520" endtime="20221202 17:21:38.654"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${message_reussi}</arg>
+<arg>Your Account Has Been Created!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221202 17:21:38.668" level="INFO">Element '//h1[normalize-space()='Your Account Has Been Created!']' contains text 'Your Account Has Been Created!'.</msg>
+<status status="PASS" starttime="20221202 17:21:38.654" endtime="20221202 17:21:38.668"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_continue2}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221202 17:21:38.678" level="INFO">Element '//a[normalize-space()='Continue']' is displayed.</msg>
+<status status="PASS" starttime="20221202 17:21:38.668" endtime="20221202 17:21:38.678"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:38.519" endtime="20221202 17:21:38.678"/>
+</kw>
+<kw name="se deconnecter du compte" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_MyAccount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:38.679" level="INFO">Clicking element 'xpath://span[@class='hidden-xs hidden-sm hidden-md'and text()='My Account']'.</msg>
+<status status="PASS" starttime="20221202 17:21:38.679" endtime="20221202 17:21:38.697"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_Logout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:38.698" level="INFO">Clicking element '//a[text()='Logout']'.</msg>
+<status status="PASS" starttime="20221202 17:21:38.697" endtime="20221202 17:21:39.252"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_continue3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:21:39.253" level="INFO">Clicking element '//a[normalize-space()='Continue']'.</msg>
+<status status="PASS" starttime="20221202 17:21:39.253" endtime="20221202 17:21:39.636"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221202 17:21:39.636" endtime="20221202 17:21:41.781"/>
+</kw>
+<status status="PASS" starttime="20221202 17:21:38.679" endtime="20221202 17:21:41.781"/>
+</kw>
+<doc>L'utilisateur peut s'inscrire à l'application en optant pour l'abonnement à la Newsletter</doc>
+<status status="PASS" starttime="20221202 17:21:29.216" endtime="20221202 17:21:41.782"/>
+</test>
+<status status="PASS" starttime="20221202 17:21:29.104" endtime="20221202 17:21:41.783"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exigence02">Exigence02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
