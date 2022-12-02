@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221202 00:18:08.463" rpa="false" schemaversion="3">
+<suite id="s1" name="Exercise1" source="c:\Users\Admin\Desktop\Proget_Final\scripts\Exercise1.robot">
+<test id="s1-t1" name="creation d un nouveau compte sans newletters" line="15">
+<kw name="connecter au site" library="Keywords" type="SETUP">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221202 00:18:08.687" level="INFO">Opening browser 'gc' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20221202 00:18:08.686" endtime="20221202 00:18:12.531"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221202 00:18:12.531" endtime="20221202 00:18:12.647"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221202 00:18:14.698" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221202 00:18:12.647" endtime="20221202 00:18:14.698"/>
+</kw>
+<status status="PASS" starttime="20221202 00:18:08.686" endtime="20221202 00:18:14.699"/>
+</kw>
+<kw name="clikMyAccount" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_MyAccount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 00:18:14.702" level="INFO">Clicking element 'xpath://span[@class='hidden-xs hidden-sm hidden-md'and text()='My Account']'.</msg>
+<status status="PASS" starttime="20221202 00:18:14.701" endtime="20221202 00:18:15.118"/>
+</kw>
+<status status="PASS" starttime="20221202 00:18:14.700" endtime="20221202 00:18:15.118"/>
+</kw>
+<kw name="clickRegistre" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_Register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 00:18:15.121" level="INFO">Clicking element '//a[@href='http://tutorialsninja.com/demo/index.php?route=account/register']'.</msg>
+<status status="PASS" starttime="20221202 00:18:15.120" endtime="20221202 00:18:16.514"/>
+</kw>
+<status status="PASS" starttime="20221202 00:18:15.120" endtime="20221202 00:18:16.514"/>
+</kw>
+<kw name="remplirFormulaire" library="Keywords">
+<arg>${firstN}</arg>
+<arg>${lastN}</arg>
+<arg>${vemail}</arg>
+<arg>${vtelephone}</arg>
+<arg>${vpassword}</arg>
+<arg>${vconfirm}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221202 00:18:16.515" endtime="20221202 00:18:16.541"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${firstName}</arg>
+<arg>${firstN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 00:18:16.542" level="INFO">Typing text '1stname' into text field '//input[@id='input-firstname']'.</msg>
+<status status="PASS" starttime="20221202 00:18:16.542" endtime="20221202 00:18:16.617"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${lastName}</arg>
+<arg>${lastN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 00:18:16.618" level="INFO">Typing text 'LstName' into text field '//input[@id='input-lastname']'.</msg>
+<status status="PASS" starttime="20221202 00:18:16.617" endtime="20221202 00:18:16.694"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email}</arg>
+<arg>${vemail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 00:18:16.696" level="INFO">Typing text 'nom_prenom@gmail.com' into text field '//input[@id='input-email']'.</msg>
+<status status="PASS" starttime="20221202 00:18:16.695" endtime="20221202 00:18:16.785"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${telephone}</arg>
+<arg>${vtelephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 00:18:16.786" level="INFO">Typing text '999-999-9999' into text field '//input[@id='input-telephone']'.</msg>
+<status status="PASS" starttime="20221202 00:18:16.786" endtime="20221202 00:18:16.872"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>${vpassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 00:18:16.872" level="INFO">Typing password into text field '//input[@id='input-password']'.</msg>
+<msg timestamp="20221202 00:18:16.907" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221202 00:18:16.948" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221202 00:18:16.872" endtime="20221202 00:18:16.948"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_continue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 00:18:16.949" level="INFO">Clicking element '//input[@value='Continue']'.</msg>
+<status status="PASS" starttime="20221202 00:18:16.948" endtime="20221202 00:18:17.267"/>
+</kw>
+<status status="PASS" starttime="20221202 00:18:16.514" endtime="20221202 00:18:17.268"/>
+</kw>
+<status status="PASS" starttime="20221202 00:18:08.685" endtime="20221202 00:18:17.268"/>
+</test>
+<status status="PASS" starttime="20221202 00:18:08.468" endtime="20221202 00:18:17.271"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exercise1">Exercise1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
