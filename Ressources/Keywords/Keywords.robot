@@ -41,12 +41,18 @@ continuer l'inscription
 
 validation de creation
     Capture Page Screenshot    ./ScreenShot/pic.png    
-    Element Should Contain    ${message_reussi}    Your Account Has Been Created!
+    Page Should Contain    ${message_reussi}    
     Element Should Be Visible    ${btn_continue2}
 
-se deconnecter du compte
+verification d'enregistrer un compte double
+    Capture Page Screenshot    ./ScreenShot/warning.png
+    Page Should Contain Element    ${message_erreur}
+
+logout
     Click Element    ${link_MyAccount}
     Click Element    ${link_Logout} 
     Click Element    ${btn_continue3}
-    [Teardown]    Close Browser
+
+se deconnecter
+    Close Browser
     

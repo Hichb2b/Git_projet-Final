@@ -15,17 +15,15 @@ ${vconfirm}    1234
 
 
 *** Test Cases ***
-Test s'inscrire a l'applic avec Newsletter
-    [Documentation]    L'utilisateur peut s'inscrire à l'application en optant pour l'abonnement à la Newsletter    
-    ...    Se connecter avec le compte d'utilisateur
+Test enregistrer un compt en double
+    [Documentation]    L'utilisateur ne peut pas enregistrer un compte en double    
+    ...    Avoir un compte doit créé
     connecter au site    ${Url}    ${Browser}
     clikMyAccount
     clickRegistre
     remplirFormulaire    ${firstN}    ${lastN}    ${vemail}     ${vtelephone}    ${vpassword}    ${vconfirm}
-    choisir Newsletter
     choisir Privacy Policy
     continuer l'inscription
-    validation de creation
-    logout
-    se deconnecter
+    verification d'enregistrer un compte double
+    se deconnecter 
 

@@ -33,3 +33,6 @@ btn_continue2="//a[normalize-space()='Continue']"
 link_MyAccount="xpath://span[@class='hidden-xs hidden-sm hidden-md'and text()='My Account']"
 link_Logout="//a[text()='Logout']"
 btn_continue3="//a[normalize-space()='Continue']"
+
+# verification d'enregistrer un compte double
+message_erreur="//div[@class='alert alert-danger alert-dismissible']"
