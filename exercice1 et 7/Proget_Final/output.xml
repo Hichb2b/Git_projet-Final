@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221203 21:24:26.110" rpa="false" schemaversion="3">
+<suite id="s1" name="Exercice7" source="c:\Users\Admin\Desktop\Proget_Final\scripts\Exercice7.robot">
+<test id="s1-t1" name="test produit non disponible" line="9">
+<kw name="connecter au site" library="Keywords" type="SETUP">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>se connecter au site Your Store</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221203 21:24:26.311" level="INFO">Opening browser 'gc' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20221203 21:24:26.310" endtime="20221203 21:24:31.701"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221203 21:24:31.701" endtime="20221203 21:24:31.821"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221203 21:24:33.835" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221203 21:24:31.821" endtime="20221203 21:24:33.835"/>
+</kw>
+<status status="PASS" starttime="20221203 21:24:26.309" endtime="20221203 21:24:33.836"/>
+</kw>
+<kw name="click link chekout" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_ckchekout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221203 21:24:33.838" level="INFO">Clicking element '//span[contains(text(),'out')]'.</msg>
+<status status="PASS" starttime="20221203 21:24:33.837" endtime="20221203 21:24:34.464"/>
+</kw>
+<status status="PASS" starttime="20221203 21:24:33.837" endtime="20221203 21:24:34.465"/>
+</kw>
+<kw name="rechercher produit non disponible" library="Keywords">
+<arg>${pdtInv}</arg>
+<doc>introduire un produit qui ne se trouve pas dans le stock</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${search}</arg>
+<arg>${pdtInv}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221203 21:24:34.467" level="INFO">Typing text 'xxphone' into text field '//input[contains(@name,'sear')]'.</msg>
+<status status="PASS" starttime="20221203 21:24:34.467" endtime="20221203 21:24:34.552"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221203 21:24:34.552" level="INFO">Clicking button '//span/button[contains(@class,'btn') ]'.</msg>
+<status status="PASS" starttime="20221203 21:24:34.552" endtime="20221203 21:24:34.948"/>
+</kw>
+<status status="PASS" starttime="20221203 21:24:34.466" endtime="20221203 21:24:34.949"/>
+</kw>
+<kw name="verification test" library="Keywords">
+<doc>verification du test</doc>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>There is no product that matches the search criteria.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221203 21:24:34.963" level="INFO">Current page contains text 'There is no product that matches the search criteria.'.</msg>
+<status status="PASS" starttime="20221203 21:24:34.950" endtime="20221203 21:24:34.963"/>
+</kw>
+<status status="PASS" starttime="20221203 21:24:34.949" endtime="20221203 21:24:34.964"/>
+</kw>
+<kw name="se deconnecter" library="Keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221203 21:24:34.965" endtime="20221203 21:24:37.106"/>
+</kw>
+<status status="PASS" starttime="20221203 21:24:34.964" endtime="20221203 21:24:37.107"/>
+</kw>
+<status status="PASS" starttime="20221203 21:24:26.309" endtime="20221203 21:24:37.108"/>
+</test>
+<status status="PASS" starttime="20221203 21:24:26.114" endtime="20221203 21:24:37.110"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exercice7">Exercice7</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
