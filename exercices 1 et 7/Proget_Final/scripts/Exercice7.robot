@@ -9,6 +9,6 @@ ${pdtInv}    xxphone
 test produit non disponible
     click link chekout
     rechercher produit non disponible    ${pdtInv}
-    verification test
+    verification disponibilite
 
     

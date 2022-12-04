@@ -8,6 +8,8 @@ telephone="//input[@id='input-telephone']"
 password="//input[@id='input-password']"
 confirm="//input[@id='input-confirm']"
 btn_continue="//input[@value='Continue']"
+btn2_continue="//a[text()='Continue']"
+logout="//a[text()='Logout']"
 
 # locateur exercice 7
 link_ckchekout="//span[contains(text(),'out')]"

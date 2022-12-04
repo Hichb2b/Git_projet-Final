@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221203 21:24:26.110" rpa="false" schemaversion="3">
-<suite id="s1" name="Exercice7" source="c:\Users\Admin\Desktop\Proget_Final\scripts\Exercice7.robot">
-<test id="s1-t1" name="test produit non disponible" line="9">
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221204 17:27:36.610" rpa="false" schemaversion="3">
+<suite id="s1" name="Exercise1" source="c:\Users\Admin\Desktop\Proget_Final\scripts\Exercise1.robot">
+<test id="s1-t1" name="creation d un nouveau compte sans newletters" line="16">
 <kw name="connecter au site" library="Keywords" type="SETUP">
 <arg>${Url}</arg>
 <arg>${Browser}</arg>
@@ -10,68 +10,171 @@
 <arg>${Url}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221203 21:24:26.311" level="INFO">Opening browser 'gc' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
-<status status="PASS" starttime="20221203 21:24:26.310" endtime="20221203 21:24:31.701"/>
+<msg timestamp="20221204 17:27:36.850" level="INFO">Opening browser 'gc' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20221204 17:27:36.850" endtime="20221204 17:27:40.388"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221203 21:24:31.701" endtime="20221203 21:24:31.821"/>
+<status status="PASS" starttime="20221204 17:27:40.388" endtime="20221204 17:27:40.509"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221203 21:24:33.835" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221203 21:24:31.821" endtime="20221203 21:24:33.835"/>
+<msg timestamp="20221204 17:27:42.514" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221204 17:27:40.510" endtime="20221204 17:27:42.514"/>
 </kw>
-<status status="PASS" starttime="20221203 21:24:26.309" endtime="20221203 21:24:33.836"/>
+<status status="PASS" starttime="20221204 17:27:36.849" endtime="20221204 17:27:42.515"/>
 </kw>
-<kw name="click link chekout" library="Keywords">
+<kw name="clik My Account" library="Keywords">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${link_ckchekout}</arg>
+<arg>${link_MyAccount}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221203 21:24:33.838" level="INFO">Clicking element '//span[contains(text(),'out')]'.</msg>
-<status status="PASS" starttime="20221203 21:24:33.837" endtime="20221203 21:24:34.464"/>
+<msg timestamp="20221204 17:27:42.517" level="INFO">Clicking element 'xpath://span[@class='hidden-xs hidden-sm hidden-md'and text()='My Account']'.</msg>
+<status status="PASS" starttime="20221204 17:27:42.517" endtime="20221204 17:27:42.565"/>
 </kw>
-<status status="PASS" starttime="20221203 21:24:33.837" endtime="20221203 21:24:34.465"/>
+<status status="PASS" starttime="20221204 17:27:42.516" endtime="20221204 17:27:42.566"/>
 </kw>
-<kw name="rechercher produit non disponible" library="Keywords">
-<arg>${pdtInv}</arg>
-<doc>introduire un produit qui ne se trouve pas dans le stock</doc>
+<kw name="click Registre" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_Register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:42.568" level="INFO">Clicking element '//a[@href='http://tutorialsninja.com/demo/index.php?route=account/register']'.</msg>
+<status status="PASS" starttime="20221204 17:27:42.567" endtime="20221204 17:27:43.706"/>
+</kw>
+<status status="PASS" starttime="20221204 17:27:42.566" endtime="20221204 17:27:43.706"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221204 17:27:45.718" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221204 17:27:43.707" endtime="20221204 17:27:45.719"/>
+</kw>
+<kw name="remplir Formulaire" library="Keywords">
+<arg>${firstN}</arg>
+<arg>${lastN}</arg>
+<arg>${vemail}</arg>
+<arg>${vtelephone}</arg>
+<arg>${vpassword}</arg>
+<arg>${vconfirm}</arg>
+<doc>remplir le formulaire pour creer un nouveau compte</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${firstName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221204 17:27:45.721" endtime="20221204 17:27:45.750"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${search}</arg>
-<arg>${pdtInv}</arg>
+<arg>${firstName}</arg>
+<arg>${firstN}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221203 21:24:34.467" level="INFO">Typing text 'xxphone' into text field '//input[contains(@name,'sear')]'.</msg>
-<status status="PASS" starttime="20221203 21:24:34.467" endtime="20221203 21:24:34.552"/>
+<msg timestamp="20221204 17:27:45.751" level="INFO">Typing text '1stname9' into text field '//input[@id='input-firstname']'.</msg>
+<status status="PASS" starttime="20221204 17:27:45.750" endtime="20221204 17:27:45.838"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_search}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221203 21:24:34.552" level="INFO">Clicking button '//span/button[contains(@class,'btn') ]'.</msg>
-<status status="PASS" starttime="20221203 21:24:34.552" endtime="20221203 21:24:34.948"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${lastName}</arg>
+<arg>${lastN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:45.839" level="INFO">Typing text 'lastname' into text field '//input[@id='input-lastname']'.</msg>
+<status status="PASS" starttime="20221204 17:27:45.838" endtime="20221204 17:27:45.932"/>
 </kw>
-<status status="PASS" starttime="20221203 21:24:34.466" endtime="20221203 21:24:34.949"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email}</arg>
+<arg>${vemail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:45.934" level="INFO">Typing text '1stname9@gmail.com' into text field '//input[@id='input-email']'.</msg>
+<status status="PASS" starttime="20221204 17:27:45.933" endtime="20221204 17:27:46.032"/>
 </kw>
-<kw name="verification test" library="Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${telephone}</arg>
+<arg>${vtelephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:46.033" level="INFO">Typing text '999-999-9999' into text field '//input[@id='input-telephone']'.</msg>
+<status status="PASS" starttime="20221204 17:27:46.032" endtime="20221204 17:27:46.122"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>${vpassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:46.123" level="INFO">Typing password into text field '//input[@id='input-password']'.</msg>
+<msg timestamp="20221204 17:27:46.172" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221204 17:27:46.222" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221204 17:27:46.123" endtime="20221204 17:27:46.222"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${confirm}</arg>
+<arg>${vconfirm}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:46.223" level="INFO">Typing password into text field '//input[@id='input-confirm']'.</msg>
+<msg timestamp="20221204 17:27:46.263" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221204 17:27:46.316" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221204 17:27:46.223" endtime="20221204 17:27:46.316"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:46.317" level="INFO">Clicking element '//input[contains(@type,'box')]'.</msg>
+<status status="PASS" starttime="20221204 17:27:46.316" endtime="20221204 17:27:46.370"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_continue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:46.371" level="INFO">Clicking element '//input[@value='Continue']'.</msg>
+<status status="PASS" starttime="20221204 17:27:46.370" endtime="20221204 17:27:47.063"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221204 17:27:49.069" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221204 17:27:47.064" endtime="20221204 17:27:49.070"/>
+</kw>
+<status status="PASS" starttime="20221204 17:27:45.720" endtime="20221204 17:27:49.070"/>
+</kw>
+<kw name="verifier creation" library="Keywords">
 <doc>verification du test</doc>
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>There is no product that matches the search criteria.</arg>
+<arg>Your Account Has Been Created!</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221203 21:24:34.963" level="INFO">Current page contains text 'There is no product that matches the search criteria.'.</msg>
-<status status="PASS" starttime="20221203 21:24:34.950" endtime="20221203 21:24:34.963"/>
+<msg timestamp="20221204 17:27:49.087" level="INFO">Current page contains text 'Your Account Has Been Created!'.</msg>
+<status status="PASS" starttime="20221204 17:27:49.072" endtime="20221204 17:27:49.088"/>
 </kw>
-<status status="PASS" starttime="20221203 21:24:34.949" endtime="20221203 21:24:34.964"/>
+<status status="PASS" starttime="20221204 17:27:49.071" endtime="20221204 17:27:49.088"/>
+</kw>
+<kw name="ouvrir page main" library="Keywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${btn2_continue}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:49.089" level="INFO">Clicking link '//a[text()='Continue']'.</msg>
+<status status="PASS" starttime="20221204 17:27:49.089" endtime="20221204 17:27:49.465"/>
+</kw>
+<status status="PASS" starttime="20221204 17:27:49.088" endtime="20221204 17:27:49.465"/>
+</kw>
+<kw name="fermer page main" library="Keywords">
+<kw name="clik My Account" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_MyAccount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:49.467" level="INFO">Clicking element 'xpath://span[@class='hidden-xs hidden-sm hidden-md'and text()='My Account']'.</msg>
+<status status="PASS" starttime="20221204 17:27:49.467" endtime="20221204 17:27:49.515"/>
+</kw>
+<status status="PASS" starttime="20221204 17:27:49.467" endtime="20221204 17:27:49.515"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${logout}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221204 17:27:49.516" level="INFO">Clicking link '//a[text()='Logout']'.</msg>
+<status status="PASS" starttime="20221204 17:27:49.515" endtime="20221204 17:27:50.130"/>
+</kw>
+<status status="PASS" starttime="20221204 17:27:49.466" endtime="20221204 17:27:50.131"/>
 </kw>
 <kw name="se deconnecter" library="Keywords" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221203 21:24:34.965" endtime="20221203 21:24:37.106"/>
+<status status="PASS" starttime="20221204 17:27:50.132" endtime="20221204 17:27:52.274"/>
 </kw>
-<status status="PASS" starttime="20221203 21:24:34.964" endtime="20221203 21:24:37.107"/>
+<status status="PASS" starttime="20221204 17:27:50.132" endtime="20221204 17:27:52.275"/>
 </kw>
-<status status="PASS" starttime="20221203 21:24:26.309" endtime="20221203 21:24:37.108"/>
+<status status="PASS" starttime="20221204 17:27:36.848" endtime="20221204 17:27:52.276"/>
 </test>
-<status status="PASS" starttime="20221203 21:24:26.114" endtime="20221203 21:24:37.110"/>
+<status status="PASS" starttime="20221204 17:27:36.616" endtime="20221204 17:27:52.279"/>
 </suite>
 <statistics>
 <total>
@@ -80,7 +183,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Exercice7">Exercice7</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exercise1">Exercise1</stat>
 </suite>
 </statistics>
 <errors>

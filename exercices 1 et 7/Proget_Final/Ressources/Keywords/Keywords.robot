@@ -33,9 +33,17 @@ remplir Formulaire
     Input Password    ${confirm}    ${vconfirm}
     Click Element    ${checkbox}  
     Click Element    ${btn_continue} 
+    Sleep    2
 verifier creation
     [Documentation]    verification du test
     Page Should Contain    Your Account Has Been Created!
+ouvrir page main
+    Click Link    ${btn2_continue}
+fermer page main    
+    clik My Account
+    Click Link    ${logout}
+
+    
 
 
 se deconnecter 
@@ -49,7 +57,7 @@ rechercher produit non disponible
     [Arguments]    ${pdtInv}
     Input Text    ${search}    ${pdtInv}
     Click Button    ${btn_search}
-verification test
+verification disponibilite
     [Documentation]    verification du test
     Page Should Contain    There is no product that matches the search criteria.
 
