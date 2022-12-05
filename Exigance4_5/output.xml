@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221202 17:59:54.755" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Login Logout Falls Login PReinicialisation" source="d:\RF_Projects\E_Commerce_Project\Scripts\Test_Login_Logout_Falls_Login_PReinicialisation.robot">
+<test id="s1-t1" name="Test" line="18">
+<kw name="Login" library="Login">
+<arg>${vurl}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vNomUtilisateure}</arg>
+<arg>${vPassword}</arg>
+<doc>This keyword allows you to connect to a user account with an initial identifier</doc>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221202 17:59:55.072" endtime="20221202 17:59:55.072"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vurl}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221202 17:59:55.073" level="INFO">Opening browser 'gc' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20221202 17:59:55.073" endtime="20221202 17:59:58.806"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221202 17:59:58.807" endtime="20221202 17:59:58.937"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TitleECommerce}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221202 17:59:58.937" endtime="20221202 17:59:58.968"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Btn_MyAcount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:59:58.970" level="INFO">Clicking element '//span[@class='hidden-xs hidden-sm hidden-md'][text()='My Account']'.</msg>
+<status status="PASS" starttime="20221202 17:59:58.969" endtime="20221202 17:59:59.033"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 17:59:59.037" level="INFO">Clicking element '//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20221202 17:59:59.035" endtime="20221202 17:59:59.457"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TitleReturningCoustomer}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221202 17:59:59.458" endtime="20221202 17:59:59.498"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_emailL}</arg>
+<arg>${vNomUtilisateure}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 17:59:59.499" level="INFO">Typing text 'JSmith@yahoo.com' into text field '//input[@id='input-email']'.</msg>
+<status status="PASS" starttime="20221202 17:59:59.498" endtime="20221202 17:59:59.612"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_passwordL}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 17:59:59.613" level="INFO">Typing password into text field '//input[@id='input-password']'.</msg>
+<msg timestamp="20221202 17:59:59.658" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221202 17:59:59.731" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221202 17:59:59.612" endtime="20221202 17:59:59.731"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 17:59:59.732" level="INFO">Clicking button '//input[@type='submit'][@value='Login']'.</msg>
+<status status="PASS" starttime="20221202 17:59:59.731" endtime="20221202 18:00:00.444"/>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<arg>${TitleMyAccount}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20221202 18:00:00.452" level="INFO">Current location contains 'http://tutorialsninja.com/demo/index.php?route=account/account'.</msg>
+<status status="PASS" starttime="20221202 18:00:00.445" endtime="20221202 18:00:00.453"/>
+</kw>
+<status status="PASS" starttime="20221202 17:59:55.071" endtime="20221202 18:00:00.453"/>
+</kw>
+<kw name="Logout" library="Logout">
+<doc>This keyword allows you to deconnect from user account with an initial identifier</doc>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221202 18:00:00.455" endtime="20221202 18:00:00.457"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Btn_MyAcount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:00.458" level="INFO">Clicking element '//span[@class='hidden-xs hidden-sm hidden-md'][text()='My Account']'.</msg>
+<status status="PASS" starttime="20221202 18:00:00.457" endtime="20221202 18:00:00.506"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LLogout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:00.507" level="INFO">Clicking element '//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Logout']'.</msg>
+<status status="PASS" starttime="20221202 18:00:00.507" endtime="20221202 18:00:01.163"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleLogout}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221202 18:00:01.192" level="INFO">Element '//div[@id='content']/h1[normalize-space()='Account Logout']' is displayed.</msg>
+<status status="PASS" starttime="20221202 18:00:01.164" endtime="20221202 18:00:01.193"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Btn_ContinueLogout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:01.194" level="INFO">Clicking element '//a[@class='btn btn-primary'][normalize-space()='Continue']'.</msg>
+<status status="PASS" starttime="20221202 18:00:01.193" endtime="20221202 18:00:01.671"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221202 18:00:01.672" endtime="20221202 18:00:03.937"/>
+</kw>
+<status status="PASS" starttime="20221202 18:00:00.455" endtime="20221202 18:00:03.938"/>
+</kw>
+<kw name="Falls Login" library="Login_falls">
+<arg>${vurl}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vNomUtilisateure}</arg>
+<arg>${vPasswordF}</arg>
+<doc>This keyword allows you to refuse to connect to a user account with an invalid ID</doc>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221202 18:00:03.942" endtime="20221202 18:00:03.943"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vurl}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221202 18:00:03.946" level="INFO">Opening browser 'gc' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20221202 18:00:03.944" endtime="20221202 18:00:07.950"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221202 18:00:07.950" endtime="20221202 18:00:08.088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TitleECommerce}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221202 18:00:08.088" endtime="20221202 18:00:08.116"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Btn_MyAcount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:08.119" level="INFO">Clicking element '//span[@class='hidden-xs hidden-sm hidden-md'][text()='My Account']'.</msg>
+<status status="PASS" starttime="20221202 18:00:08.117" endtime="20221202 18:00:08.178"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:08.179" level="INFO">Clicking element '//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20221202 18:00:08.178" endtime="20221202 18:00:08.625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TitleReturningCoustomer}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221202 18:00:08.626" endtime="20221202 18:00:08.667"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_emailL}</arg>
+<arg>${vNomUtilisateure}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:08.670" level="INFO">Typing text 'JSmith@yahoo.com' into text field '//input[@id='input-email']'.</msg>
+<status status="PASS" starttime="20221202 18:00:08.668" endtime="20221202 18:00:08.779"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_passwordL}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:08.780" level="INFO">Typing password into text field '//input[@id='input-password']'.</msg>
+<msg timestamp="20221202 18:00:08.825" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221202 18:00:08.866" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221202 18:00:08.779" endtime="20221202 18:00:08.866"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:08.867" level="INFO">Clicking button '//input[@type='submit'][@value='Login']'.</msg>
+<status status="PASS" starttime="20221202 18:00:08.866" endtime="20221202 18:00:09.333"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${Error_Login}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221202 18:00:09.349" level="INFO">Current page contains element '//div[@class='alert alert-danger alert-dismissible'][contains(text(),' Warning: No match for E-Mail Address and/or Password.')]'.</msg>
+<status status="PASS" starttime="20221202 18:00:09.333" endtime="20221202 18:00:09.350"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221202 18:00:09.350" endtime="20221202 18:00:11.621"/>
+</kw>
+<status status="PASS" starttime="20221202 18:00:03.940" endtime="20221202 18:00:11.622"/>
+</kw>
+<kw name="Password reinicialisation" library="Pass_reinitialising">
+<arg>${vurl}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vNomUtilisateure}</arg>
+<doc>This keyword allows you to reinicialis password to a user account with an initial identifier</doc>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221202 18:00:11.625" endtime="20221202 18:00:11.627"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vurl}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221202 18:00:11.630" level="INFO">Opening browser 'gc' to base url 'http://tutorialsninja.com/demo/index.php?route=common/home'.</msg>
+<status status="PASS" starttime="20221202 18:00:11.627" endtime="20221202 18:00:15.680"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221202 18:00:15.681" endtime="20221202 18:00:15.813"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TitleECommerce}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221202 18:00:15.814" endtime="20221202 18:00:15.842"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Btn_MyAcount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:15.843" level="INFO">Clicking element '//span[@class='hidden-xs hidden-sm hidden-md'][text()='My Account']'.</msg>
+<status status="PASS" starttime="20221202 18:00:15.843" endtime="20221202 18:00:15.899"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:15.902" level="INFO">Clicking element '//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20221202 18:00:15.900" endtime="20221202 18:00:16.326"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TitleReturningCoustomer}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221202 18:00:16.326" endtime="20221202 18:00:16.367"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_emailL}</arg>
+<arg>${vNomUtilisateure}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:16.369" level="INFO">Typing text 'JSmith@yahoo.com' into text field '//input[@id='input-email']'.</msg>
+<status status="PASS" starttime="20221202 18:00:16.368" endtime="20221202 18:00:16.475"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_forgotenPass}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:16.476" level="INFO">Clicking element '//div[@class='form-group']//a[text()='Forgotten Password']'.</msg>
+<status status="PASS" starttime="20221202 18:00:16.476" endtime="20221202 18:00:16.897"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${TitleForgotenPass}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221202 18:00:16.912" level="INFO">Current page contains element '//div[@id='content']/h1[text()='Forgot Your Password?']'.</msg>
+<status status="PASS" starttime="20221202 18:00:16.897" endtime="20221202 18:00:16.912"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_emailL}</arg>
+<arg>${vNomUtilisateure}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:16.913" level="INFO">Typing text 'JSmith@yahoo.com' into text field '//input[@id='input-email']'.</msg>
+<status status="PASS" starttime="20221202 18:00:16.913" endtime="20221202 18:00:17.022"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Btn_ContinueForgotPass}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 18:00:17.024" level="INFO">Clicking element '//input[@type='submit'][@value='Continue']'.</msg>
+<status status="PASS" starttime="20221202 18:00:17.023" endtime="20221202 18:00:17.881"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${Confirmation_forgotenPass}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221202 18:00:17.901" level="INFO">Current page contains element '//div[@class='alert alert-success alert-dismissible'][contains(text(),' An email with a confirmation link has been sent your email address.')]'.</msg>
+<status status="PASS" starttime="20221202 18:00:17.881" endtime="20221202 18:00:17.902"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221202 18:00:17.903" endtime="20221202 18:00:20.187"/>
+</kw>
+<status status="PASS" starttime="20221202 18:00:11.623" endtime="20221202 18:00:20.188"/>
+</kw>
+<status status="PASS" starttime="20221202 17:59:55.070" endtime="20221202 18:00:20.190"/>
+</test>
+<status status="PASS" starttime="20221202 17:59:54.762" endtime="20221202 18:00:20.195"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Login Logout Falls Login PReinicialisation">Test Login Logout Falls Login PReinicialisation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
